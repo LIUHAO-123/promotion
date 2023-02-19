@@ -1,0 +1,22 @@
+management:
+  health:
+    probes:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    tags:
+      application: ${spring.application.name}
+spring:
+  datasource:
+    poolName: demo-pool
+    autoCommit: false
+info:
+  application:
+    name: ${spring.application.name}
+    description: A Demo for Spring Boot hello World!
+    author:
+      name: jerry
+      bio: Nuclear Safety Inspector, Former Technical Supervisor

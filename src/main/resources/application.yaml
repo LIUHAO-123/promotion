@@ -1,0 +1,19 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  profiles:
+    active: dev
+  application:
+    name: promotion
+  datasource:
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/promotion?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:1234}
+    hikari:
+      connectionTimeout: 30000
+      maximumPoolSize: 20
+      minimumIdle: 5
